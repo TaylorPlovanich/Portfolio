@@ -1,72 +1,45 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #333;
+/* General Button Style */
+.button {
+    background-color: #f39c12;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
+    padding: 15px 30px;
     text-decoration: none;
-}
-
-footer {
+    font-size: 20px;
     text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-/* Home Page */
-.intro {
+.button:hover {
+    background-color: #e67e22;
+}
+
+/* Works Gallery Layout */
+.works-gallery {
     text-align: center;
-    margin: 50px 0;
+    padding: 50px 0;
 }
 
-/* Portfolio Page */
-.portfolio {
-    padding: 50px;
-}
-
-.projects {
+.project-gallery {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .project {
-    width: 30%;
-    margin-bottom: 30px;
+    margin: 20px;
+    width: 250px;
 }
 
 .project img {
     width: 100%;
-    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project p {
-    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #ddd;
 }
