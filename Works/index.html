@@ -3,65 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Art Exhibition - Museum Style</title>
+    <title>Taylor Plovanich | Portfolio</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Taylor Plovanich's Portfolio</h1>
+
+    <header class="navbar">
+        <div class="logo">Taylor Plovanich</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#work" class="active">Work</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="intro">
-            <h2>Welcome to My Portfolio. I built this site from scratch using HTML/CSS.</h2>
-            <p>Click on the images below to view the full works. I hope you enjoy exploring the creative journey I’ve undertaken!</p>
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <h1>Creative Work & Project Showcase</h1>
+            <p>A selection of projects ranging from interactive design and graphic media to video production and animation.</p>
         </section>
 
-        <section class="gallery-layout">
-            <!-- Interactive Works Column -->
-            <div class="section interactive wall">
-                <div class="podium">
-                    <a href="graphicdesign.html">
-                        <img src="Images/Posters2.jpg" alt="Twine Project" />
-                    </a>
-                    <p>Graphic Design & Print Media</p>
-                </div>
+        <!-- Category Filter Tabs -->
+        <section class="filter-container" id="work">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+            <button class="filter-btn" data-filter="video">Video</button>
+            <button class="filter-btn" data-filter="motion">Motion</button>
+            <button class="filter-btn" data-filter="illustration">Illustration</button>
+        </section>
 
-            <!-- Video Works Column -->
-            <div class="section video wall">
-                <div class="podium">
-                    <a href="videoproduction.html">
-                        <img src="Images/onepiecepodium.jpg" alt="One Piece Montage" />
-                    </a>
-                    <p>Video Production & Editing</p>
-                </div>
-                <div class="podium">
-                    <a href="motiondesign.html">
-                        <img src="Images/FitFrame.jpg" alt="Ballerina and Pantera Video" />
-                    </a>
-                    <p>Motion Design & Animation</p>
-                </div>
+        <!-- Modern Project Grid -->
+        <section class="project-grid">
+
+            <!-- Graphic Design -->
+            <div class="project-card" data-category="graphic">
+                <a href="graphicdesign.html" class="card-link">
+                    <div class="image-wrapper">
+                        <img src="Images/Posters2.jpg" alt="Graphic Design Project">
+                    </div>
+                    <div class="card-info">
+                        <span class="category-tag">Graphic Design</span>
+                        <h3>Graphic Design & Print Media</h3>
+                    </div>
+                </a>
             </div>
 
-            <!-- Static Works Column -->
-            <div class="section static wall">
-                <div class="podium">
-                    <a href="illustrationdesign.html">
-                        <img src="Images/blueshellpodium.jpg" alt="Mario Kart Blue Shell" />
-                    </a>
-                    <p>Illustration & Vector Design</p>
-                </div>
+            <!-- Video Production -->
+            <div class="project-card" data-category="video">
+                <a href="videoproduction.html" class="card-link">
+                    <div class="image-wrapper">
+                        <img src="Images/onepiecepodium.jpg" alt="Video Production Project">
+                    </div>
+                    <div class="card-info">
+                        <span class="category-tag">Video Production</span>
+                        <h3>Video Production & Editing</h3>
+                    </div>
+                </a>
             </div>
+
+            <!-- Motion Design -->
+            <div class="project-card" data-category="motion">
+                <a href="motiondesign.html" class="card-link">
+                    <div class="image-wrapper">
+                        <img src="Images/FitFrame.jpg" alt="Motion Design Project">
+                    </div>
+                    <div class="card-info">
+                        <span class="category-tag">Motion Design</span>
+                        <h3>Motion Design & Animation</h3>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Illustration -->
+            <div class="project-card" data-category="illustration">
+                <a href="illustrationdesign.html" class="card-link">
+                    <div class="image-wrapper">
+                        <img src="Images/blueshellpodium.jpg" alt="Illustration Project">
+                    </div>
+                    <div class="card-info">
+                        <span class="category-tag">Illustration</span>
+                        <h3>Illustration & Vector Design</h3>
+                    </div>
+                </a>
+            </div>
+
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Portfolio</p>
+        <p>© 2026 Taylor Plovanich</p>
     </footer>
+
+    <script src="style/gallery.js"></script>
 </body>
 </html>

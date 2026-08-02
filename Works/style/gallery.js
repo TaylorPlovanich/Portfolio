@@ -1,25 +1,25 @@
-let currentArtworkIndex = 0; // Starting index
-
-// Function to display the current artwork
-function showArtwork(direction) {
-    const artworks = document.querySelectorAll('.artwork');
-    const totalArtworks = artworks.length;
-
-    // Hide the current artwork
-    artworks[currentArtworkIndex].classList.remove('active');
-
-    // Update the index based on the direction
-    if (direction === 'next') {
-        currentArtworkIndex = (currentArtworkIndex + 1) % totalArtworks; // Loops back to the first artwork
-    } else if (direction === 'prev') {
-        currentArtworkIndex = (currentArtworkIndex - 1 + totalArtworks) % totalArtworks; // Loops back to the last artwork
-    }
-
-    // Show the new artwork
-    artworks[currentArtworkIndex].classList.add('active');
-}
-
-// Initialize by showing the first artwork
 document.addEventListener('DOMContentLoaded', () => {
-    showArtwork('next');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active state from all buttons & set on clicked
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filterValue = button.getAttribute('data-filter');
+
+            // Show / hide cards based on selected filter
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                
+                if (filterValue === 'all' || filterValue === category) {
+                    card.classList.remove('hide');
+                } else {
+                    card.classList.add('hide');
+                }
+            });
+        });
+    });
 });
